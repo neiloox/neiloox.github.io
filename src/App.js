@@ -1,5 +1,4 @@
 import { useState, useCallback } from 'react';
-import * as Sentry from "@sentry/react";
 import logo from './logo.svg';
 import './App.css';
 import TestPage from './TestPage';
@@ -8,7 +7,6 @@ function App() {
   const [showTest, setShowTest] = useState(false);
 
   const onClickBtn1 = useCallback(() => {
-    Sentry.captureMessage("Something went wrong");
     console.log(window.neiltest.test1);
   }, []);
 
